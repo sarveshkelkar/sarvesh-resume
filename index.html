@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="format-detection" content="telephone=no">
-  <meta name="color-scheme" content="light">
   <title>Sarvesh Kelkar - Resume</title>
 
   <style>
@@ -22,17 +21,16 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f2eb;
-      background: linear-gradient(145deg, #f8f7f2 0%, #ece9e1 50%, #f4f3ec 100%);
+      background-color: #f4f2eb;
+      background-image: linear-gradient(145deg, #f8f7f2 0%, #ece9e1 50%, #f4f3ec 100%);
       color: #2d3748;
       line-height: 1.55;
       font-size: 13.5px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-tap-highlight-color: transparent;
-      padding: 40px 16px;
+      padding: 36px 16px;
       min-height: 100vh;
-      overflow-x: hidden;
       overflow-wrap: break-word;
       word-break: break-word;
     }
@@ -41,34 +39,34 @@
       max-width: 840px;
       width: 100%;
       margin: 0 auto;
-      background: #ffffff;
-      background: linear-gradient(165deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 247, 243, 0.90) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      padding: 44px 48px;
-      border-radius: 16px;
+      background-color: #ffffff;
+      background-image: linear-gradient(165deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 247, 243, 0.90) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 40px 44px;
+      border-radius: 14px;
       border: 1px solid rgba(0, 0, 0, 0.08);
-      box-shadow: 0 20px 45px -10px rgba(45, 55, 72, 0.11), 0 0 0 1px rgba(255, 255, 255, 0.85) inset;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 16px 40px -10px rgba(45, 55, 72, 0.10), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     @media (hover: hover) and (pointer: fine) {
       .resume-container:hover {
         border-color: rgba(0, 0, 0, 0.13);
-        box-shadow: 0 28px 56px -12px rgba(45, 55, 72, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
+        box-shadow: 0 24px 50px -12px rgba(45, 55, 72, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
       }
     }
 
     header {
       background: rgba(255, 255, 255, 0.7);
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 246, 242, 0.75) 100%);
+      background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 246, 242, 0.75) 100%);
       border: 1px solid rgba(67, 76, 86, 0.12);
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin-bottom: 28px;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.04), inset 0 1px 0 #ffffff;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 26px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.04), inset 0 1px 0 #ffffff;
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
@@ -76,7 +74,7 @@
       header:hover {
         transform: translateY(-2px);
         border-color: rgba(67, 76, 86, 0.22);
-        box-shadow: 0 12px 26px -6px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
+        box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.07), inset 0 1px 1px #ffffff;
       }
     }
 
@@ -88,7 +86,6 @@
       color: #434c56;
       margin-bottom: 12px;
       line-height: 1.25;
-      transition: color 0.2s ease;
     }
 
     .contact-bar {
@@ -110,7 +107,7 @@
       border-radius: 6px;
       color: #434c56;
       line-height: 1.4;
-      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -118,20 +115,19 @@
         background: rgba(67, 76, 86, 0.09);
         border-color: rgba(67, 76, 86, 0.24);
         color: #262c33;
-        transform: translateY(-1px);
       }
     }
 
     .contact-bar a {
       color: #434c56;
       text-decoration: none;
-      display: inline-block;
       transition: color 0.2s ease;
     }
 
     .contact-bar a:hover,
     .contact-bar a:active {
       color: #1a2027;
+      text-decoration: underline;
     }
 
     .meta-line {
@@ -143,19 +139,10 @@
       background: rgba(67, 76, 86, 0.04);
       border: 1px solid rgba(67, 76, 86, 0.12);
       border-radius: 6px;
-      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .meta-line:hover {
-        background: rgba(67, 76, 86, 0.09);
-        border-color: rgba(67, 76, 86, 0.24);
-        color: #262c33;
-      }
     }
 
     section {
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     section:last-child {
@@ -172,33 +159,28 @@
       padding: 0 0 6px 0;
       margin-bottom: 14px;
       border: none;
-      border-bottom: 1.5px solid #374151;
-      border-radius: 0;
-      box-shadow: none;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+      border-bottom: 2px solid #374151;
+      transition: color 0.25s ease, border-color 0.25s ease;
     }
 
     @media (hover: hover) and (pointer: fine) {
       .section-title:hover {
         color: #2b323a;
         border-bottom-color: #111827;
-        transform: translateX(2px);
       }
     }
 
     .entry {
       background: rgba(255, 255, 255, 0.85);
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 247, 244, 0.78) 100%);
+      background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 247, 244, 0.78) 100%);
       border: 1px solid rgba(0, 0, 0, 0.07);
       border-radius: 10px;
       padding: 16px 18px;
       margin-bottom: 14px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 3px 12px -3px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
     }
 
     .entry:last-child {
@@ -208,13 +190,9 @@
     @media (hover: hover) and (pointer: fine) {
       .entry:hover {
         transform: translateY(-2px);
-        background: linear-gradient(145deg, #ffffff 0%, rgba(252, 251, 249, 0.95) 100%);
+        background-image: linear-gradient(145deg, #ffffff 0%, rgba(252, 251, 249, 0.95) 100%);
         border-color: rgba(0, 0, 0, 0.16);
-        box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.09), inset 0 1px 0 #ffffff;
-      }
-
-      .entry:hover .entry-title {
-        color: #434c56;
+        box-shadow: 0 10px 22px -5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffffff;
       }
     }
 
@@ -223,7 +201,7 @@
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 3px 8px;
+      gap: 4px 8px;
       margin-bottom: 3px;
     }
 
@@ -231,7 +209,6 @@
       font-weight: 700;
       font-size: 13.5px;
       color: #0f172a;
-      transition: color 0.2s ease;
     }
 
     .entry-location {
@@ -245,7 +222,7 @@
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 3px 8px;
+      gap: 4px 8px;
       font-size: 13px;
       color: #334155;
       margin-bottom: 6px;
@@ -284,16 +261,7 @@
       margin-bottom: 6px;
       color: #334155;
       text-align: left;
-      padding: 2px 4px;
-      border-radius: 4px;
-      transition: color 0.2s ease, background 0.2s ease;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      ul.bullet-list li:hover {
-        color: #0f172a;
-        background: rgba(0, 0, 0, 0.03);
-      }
+      line-height: 1.5;
     }
 
     ul.bullet-list li:last-child {
@@ -319,34 +287,30 @@
       text-underline-offset: 2px;
       font-weight: 600;
       word-break: break-all;
-      transition: color 0.2s ease;
     }
 
-    .link-text:hover,
-    .link-text:active {
+    .link-text:hover {
       color: #1f2937;
     }
 
     @media screen and (max-width: 768px) {
       body {
-        padding: 14px 10px;
+        padding: 12px 8px;
         font-size: 13px;
       }
 
       .resume-container {
-        padding: 20px 14px;
-        border-radius: 12px;
+        padding: 18px 12px;
+        border-radius: 10px;
       }
 
       header {
-        padding: 16px 14px;
-        margin-bottom: 20px;
-        border-radius: 10px;
+        padding: 14px 12px;
+        margin-bottom: 18px;
       }
 
       h1.name {
         font-size: 21px;
-        letter-spacing: 0.5px;
         margin-bottom: 10px;
       }
 
@@ -361,7 +325,6 @@
         padding: 6px 10px;
         width: 100%;
         display: block;
-        text-align: left;
       }
 
       .contact-item.separator {
@@ -376,43 +339,20 @@
         width: 100%;
       }
 
-      section {
-        margin-bottom: 20px;
-      }
-
-      .section-title {
-        font-size: 12px;
-        letter-spacing: 1.1px;
+      .entry {
+        padding: 12px 10px;
         margin-bottom: 10px;
       }
 
-      .entry {
-        padding: 14px 12px;
-        margin-bottom: 12px;
-      }
-
-      .entry-header {
+      .entry-header, .entry-subheader {
         flex-direction: column;
         align-items: flex-start;
-        gap: 3px;
+        gap: 2px;
       }
 
-      .entry-subheader {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-
-      .entry-location {
+      .entry-location, .entry-date {
         margin-left: 0;
         font-size: 11.5px;
-      }
-
-      .entry-date {
-        margin-left: 0;
-        font-size: 11.5px;
-        display: inline-block;
-        padding: 2px 6px;
       }
 
       ul.bullet-list {
@@ -420,13 +360,8 @@
       }
 
       ul.bullet-list li {
-        font-size: 12.5px;
-        margin-bottom: 7px;
-        line-height: 1.5;
-      }
-
-      .coursework-text {
         font-size: 12px;
+        margin-bottom: 6px;
       }
     }
 
@@ -449,11 +384,10 @@
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
-        transform: none !important;
       }
 
       .section-title {
-        border-bottom: 1.5px solid #1a1a1a !important;
+        border-bottom: 2px solid #1a1a1a !important;
         color: #1a1a1a !important;
         padding-bottom: 4px !important;
       }
@@ -462,18 +396,9 @@
         color: #1a1a1a !important;
       }
 
-      .contact-bar, .entry-subtitle, .entry-meta, .entry-date, .entry-location, ul.bullet-list li, .coursework-text {
-        color: #374151 !important;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit !important;
-      }
-
       .entry {
         page-break-inside: avoid;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
         padding: 0;
       }
     }
