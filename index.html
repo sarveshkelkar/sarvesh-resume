@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="light">
   <title>Sarvesh Kelkar - Resume</title>
+
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -11,23 +14,25 @@
       padding: 0;
     }
 
-    html, body {
+    html {
       width: 100%;
-      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(140deg, #f7f6f2 0%, #ebe8e1 50%, #f4f3ed 100%);
-      background-attachment: fixed;
+      background: #f4f2eb;
+      background: linear-gradient(145deg, #f8f7f2 0%, #ece9e1 50%, #f4f3ec 100%);
       color: #2d3748;
-      line-height: 1.6;
+      line-height: 1.55;
       font-size: 13.5px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-tap-highlight-color: transparent;
-      padding: 44px 16px;
+      padding: 40px 16px;
       min-height: 100vh;
+      overflow-x: hidden;
       overflow-wrap: break-word;
       word-break: break-word;
     }
@@ -36,45 +41,47 @@
       max-width: 840px;
       width: 100%;
       margin: 0 auto;
-      background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(249, 248, 245, 0.86) 100%);
-      backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      padding: 48px 52px;
+      background: #ffffff;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 247, 243, 0.90) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 44px 48px;
       border-radius: 16px;
       border: 1px solid rgba(0, 0, 0, 0.08);
-      box-shadow: 0 25px 50px -12px rgba(45, 55, 72, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      box-shadow: 0 20px 45px -10px rgba(45, 55, 72, 0.11), 0 0 0 1px rgba(255, 255, 255, 0.85) inset;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       .resume-container:hover {
-        border-color: rgba(0, 0, 0, 0.14);
-        box-shadow: 0 30px 60px -12px rgba(45, 55, 72, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
+        border-color: rgba(0, 0, 0, 0.13);
+        box-shadow: 0 28px 56px -12px rgba(45, 55, 72, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
       }
     }
 
     header {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 247, 244, 0.8) 100%);
+      background: rgba(255, 255, 255, 0.7);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 246, 242, 0.75) 100%);
       border: 1px solid rgba(67, 76, 86, 0.12);
       border-radius: 14px;
-      padding: 26px 30px;
+      padding: 24px 28px;
       margin-bottom: 28px;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.05), inset 0 1px 0 #ffffff;
+      box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.04), inset 0 1px 0 #ffffff;
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       header:hover {
         transform: translateY(-2px);
         border-color: rgba(67, 76, 86, 0.22);
-        box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
+        box-shadow: 0 12px 26px -6px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
       }
     }
 
     h1.name {
-      font-size: 27px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
@@ -82,12 +89,6 @@
       margin-bottom: 12px;
       line-height: 1.25;
       transition: color 0.2s ease;
-    }
-
-    @media (hover: hover) {
-      header:hover h1.name {
-        color: #2b323a;
-      }
     }
 
     .contact-bar {
@@ -102,6 +103,7 @@
     .contact-item {
       display: inline-flex;
       align-items: center;
+      max-width: 100%;
       background: rgba(67, 76, 86, 0.04);
       border: 1px solid rgba(67, 76, 86, 0.12);
       padding: 4px 10px;
@@ -111,7 +113,7 @@
       transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       .contact-item:hover {
         background: rgba(67, 76, 86, 0.09);
         border-color: rgba(67, 76, 86, 0.24);
@@ -127,8 +129,8 @@
       transition: color 0.2s ease;
     }
 
-    .contact-bar a:active,
-    .contact-bar a:hover {
+    .contact-bar a:hover,
+    .contact-bar a:active {
       color: #1a2027;
     }
 
@@ -144,7 +146,7 @@
       transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       .meta-line:hover {
         background: rgba(67, 76, 86, 0.09);
         border-color: rgba(67, 76, 86, 0.24);
@@ -178,7 +180,7 @@
       transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       .section-title:hover {
         color: #2b323a;
         border-bottom-color: #111827;
@@ -187,7 +189,8 @@
     }
 
     .entry {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 247, 244, 0.8) 100%);
+      background: rgba(255, 255, 255, 0.85);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 247, 244, 0.78) 100%);
       border: 1px solid rgba(0, 0, 0, 0.07);
       border-radius: 10px;
       padding: 16px 18px;
@@ -202,7 +205,7 @@
       margin-bottom: 0;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       .entry:hover {
         transform: translateY(-2px);
         background: linear-gradient(145deg, #ffffff 0%, rgba(252, 251, 249, 0.95) 100%);
@@ -219,6 +222,8 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 3px 8px;
       margin-bottom: 3px;
     }
 
@@ -232,14 +237,15 @@
     .entry-location {
       font-size: 12.5px;
       color: #64748b;
-      white-space: nowrap;
-      margin-left: 12px;
+      margin-left: auto;
     }
 
     .entry-subheader {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 3px 8px;
       font-size: 13px;
       color: #334155;
       margin-bottom: 6px;
@@ -255,8 +261,7 @@
       font-size: 12px;
       font-weight: 600;
       color: #475569;
-      white-space: nowrap;
-      margin-left: 12px;
+      margin-left: auto;
       background: rgba(0, 0, 0, 0.04);
       padding: 2px 7px;
       border-radius: 4px;
@@ -278,13 +283,13 @@
     ul.bullet-list li {
       margin-bottom: 6px;
       color: #334155;
-      text-align: justify;
+      text-align: left;
       padding: 2px 4px;
       border-radius: 4px;
       transition: color 0.2s ease, background 0.2s ease;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       ul.bullet-list li:hover {
         color: #0f172a;
         background: rgba(0, 0, 0, 0.03);
@@ -300,6 +305,7 @@
       color: #334155;
       margin-top: 4px;
       line-height: 1.55;
+      text-align: left;
     }
 
     .coursework-label {
@@ -321,13 +327,14 @@
       color: #1f2937;
     }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
       body {
-        padding: 12px 8px;
+        padding: 14px 10px;
+        font-size: 13px;
       }
 
       .resume-container {
-        padding: 18px 14px;
+        padding: 20px 14px;
         border-radius: 12px;
       }
 
@@ -338,18 +345,23 @@
       }
 
       h1.name {
-        font-size: 22px;
+        font-size: 21px;
         letter-spacing: 0.5px;
         margin-bottom: 10px;
       }
 
       .contact-bar {
         gap: 6px;
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .contact-item {
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 6px 10px;
+        width: 100%;
+        display: block;
+        text-align: left;
       }
 
       .contact-item.separator {
@@ -359,7 +371,9 @@
       .meta-line {
         margin-top: 8px;
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 5px 10px;
+        display: block;
+        width: 100%;
       }
 
       section {
@@ -373,28 +387,32 @@
       }
 
       .entry {
-        padding: 13px 12px;
-        margin-bottom: 10px;
+        padding: 14px 12px;
+        margin-bottom: 12px;
       }
 
-      .entry-header, .entry-subheader {
+      .entry-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 3px;
+      }
+
+      .entry-subheader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
       }
 
       .entry-location {
         margin-left: 0;
-        margin-top: 2px;
-        white-space: normal;
         font-size: 11.5px;
       }
 
       .entry-date {
         margin-left: 0;
-        margin-top: 4px;
-        display: inline-block;
-        white-space: normal;
         font-size: 11.5px;
+        display: inline-block;
+        padding: 2px 6px;
       }
 
       ul.bullet-list {
@@ -402,9 +420,9 @@
       }
 
       ul.bullet-list li {
-        text-align: left;
         font-size: 12.5px;
-        margin-bottom: 6px;
+        margin-bottom: 7px;
+        line-height: 1.5;
       }
 
       .coursework-text {
@@ -416,12 +434,12 @@
       body {
         background: #ffffff !important;
         color: #1a1a1a !important;
-        padding: 0;
+        padding: 0 !important;
       }
 
       .resume-container {
-        max-width: 100%;
-        padding: 0;
+        max-width: 100% !important;
+        padding: 0 !important;
         background: #ffffff !important;
         border: none !important;
         box-shadow: none !important;
@@ -436,9 +454,8 @@
 
       .section-title {
         border-bottom: 1.5px solid #1a1a1a !important;
-        border-left: none !important;
         color: #1a1a1a !important;
-        padding-left: 0;
+        padding-bottom: 4px !important;
       }
 
       h1.name, .entry-title, .coursework-label {
