@@ -11,6 +11,11 @@
       padding: 0;
     }
 
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(140deg, #f7f6f2 0%, #ebe8e1 50%, #f4f3ed 100%);
@@ -20,12 +25,16 @@
       font-size: 13.5px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
       padding: 44px 16px;
       min-height: 100vh;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .resume-container {
       max-width: 840px;
+      width: 100%;
       margin: 0 auto;
       background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(249, 248, 245, 0.86) 100%);
       backdrop-filter: blur(24px) saturate(180%);
@@ -37,9 +46,11 @@
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .resume-container:hover {
-      border-color: rgba(0, 0, 0, 0.14);
-      box-shadow: 0 30px 60px -12px rgba(45, 55, 72, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
+    @media (hover: hover) {
+      .resume-container:hover {
+        border-color: rgba(0, 0, 0, 0.14);
+        box-shadow: 0 30px 60px -12px rgba(45, 55, 72, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
+      }
     }
 
     header {
@@ -54,10 +65,12 @@
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    header:hover {
-      transform: translateY(-2px);
-      border-color: rgba(67, 76, 86, 0.22);
-      box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
+    @media (hover: hover) {
+      header:hover {
+        transform: translateY(-2px);
+        border-color: rgba(67, 76, 86, 0.22);
+        box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
+      }
     }
 
     h1.name {
@@ -67,11 +80,14 @@
       text-transform: uppercase;
       color: #434c56;
       margin-bottom: 12px;
+      line-height: 1.25;
       transition: color 0.2s ease;
     }
 
-    header:hover h1.name {
-      color: #2b323a;
+    @media (hover: hover) {
+      header:hover h1.name {
+        color: #2b323a;
+      }
     }
 
     .contact-bar {
@@ -88,25 +104,30 @@
       align-items: center;
       background: rgba(67, 76, 86, 0.04);
       border: 1px solid rgba(67, 76, 86, 0.12);
-      padding: 3px 9px;
+      padding: 4px 10px;
       border-radius: 6px;
       color: #434c56;
+      line-height: 1.4;
       transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
     }
 
-    .contact-item:hover {
-      background: rgba(67, 76, 86, 0.09);
-      border-color: rgba(67, 76, 86, 0.24);
-      color: #262c33;
-      transform: translateY(-1px);
+    @media (hover: hover) {
+      .contact-item:hover {
+        background: rgba(67, 76, 86, 0.09);
+        border-color: rgba(67, 76, 86, 0.24);
+        color: #262c33;
+        transform: translateY(-1px);
+      }
     }
 
     .contact-bar a {
       color: #434c56;
       text-decoration: none;
+      display: inline-block;
       transition: color 0.2s ease;
     }
 
+    .contact-bar a:active,
     .contact-bar a:hover {
       color: #1a2027;
     }
@@ -116,17 +137,19 @@
       font-size: 12.5px;
       color: #555f6b;
       display: inline-block;
-      padding: 3px 10px;
+      padding: 4px 10px;
       background: rgba(67, 76, 86, 0.04);
       border: 1px solid rgba(67, 76, 86, 0.12);
       border-radius: 6px;
       transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
-    .meta-line:hover {
-      background: rgba(67, 76, 86, 0.09);
-      border-color: rgba(67, 76, 86, 0.24);
-      color: #262c33;
+    @media (hover: hover) {
+      .meta-line:hover {
+        background: rgba(67, 76, 86, 0.09);
+        border-color: rgba(67, 76, 86, 0.24);
+        color: #262c33;
+      }
     }
 
     section {
@@ -155,10 +178,12 @@
       transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
     }
 
-    .section-title:hover {
-      color: #2b323a;
-      border-bottom-color: #111827;
-      transform: translateX(2px);
+    @media (hover: hover) {
+      .section-title:hover {
+        color: #2b323a;
+        border-bottom-color: #111827;
+        transform: translateX(2px);
+      }
     }
 
     .entry {
@@ -177,11 +202,17 @@
       margin-bottom: 0;
     }
 
-    .entry:hover {
-      transform: translateY(-2px);
-      background: linear-gradient(145deg, #ffffff 0%, rgba(252, 251, 249, 0.95) 100%);
-      border-color: rgba(0, 0, 0, 0.16);
-      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.09), inset 0 1px 0 #ffffff;
+    @media (hover: hover) {
+      .entry:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(145deg, #ffffff 0%, rgba(252, 251, 249, 0.95) 100%);
+        border-color: rgba(0, 0, 0, 0.16);
+        box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.09), inset 0 1px 0 #ffffff;
+      }
+
+      .entry:hover .entry-title {
+        color: #434c56;
+      }
     }
 
     .entry-header {
@@ -196,10 +227,6 @@
       font-size: 13.5px;
       color: #0f172a;
       transition: color 0.2s ease;
-    }
-
-    .entry:hover .entry-title {
-      color: #434c56;
     }
 
     .entry-location {
@@ -257,9 +284,11 @@
       transition: color 0.2s ease, background 0.2s ease;
     }
 
-    ul.bullet-list li:hover {
-      color: #0f172a;
-      background: rgba(0, 0, 0, 0.03);
+    @media (hover: hover) {
+      ul.bullet-list li:hover {
+        color: #0f172a;
+        background: rgba(0, 0, 0, 0.03);
+      }
     }
 
     ul.bullet-list li:last-child {
@@ -283,25 +312,69 @@
       text-decoration: underline;
       text-underline-offset: 2px;
       font-weight: 600;
+      word-break: break-all;
       transition: color 0.2s ease;
     }
 
-    .link-text:hover {
+    .link-text:hover,
+    .link-text:active {
       color: #1f2937;
     }
 
     @media screen and (max-width: 680px) {
       body {
-        padding: 16px 8px;
+        padding: 12px 8px;
       }
 
       .resume-container {
-        padding: 24px 16px;
+        padding: 18px 14px;
         border-radius: 12px;
       }
 
       header {
-        padding: 18px 16px;
+        padding: 16px 14px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      h1.name {
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+      }
+
+      .contact-bar {
+        gap: 6px;
+      }
+
+      .contact-item {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+
+      .contact-item.separator {
+        display: none;
+      }
+
+      .meta-line {
+        margin-top: 8px;
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+
+      section {
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 12px;
+        letter-spacing: 1.1px;
+        margin-bottom: 10px;
+      }
+
+      .entry {
+        padding: 13px 12px;
+        margin-bottom: 10px;
       }
 
       .entry-header, .entry-subheader {
@@ -309,13 +382,33 @@
         align-items: flex-start;
       }
 
-      .entry-location, .entry-date {
+      .entry-location {
+        margin-left: 0;
+        margin-top: 2px;
+        white-space: normal;
+        font-size: 11.5px;
+      }
+
+      .entry-date {
         margin-left: 0;
         margin-top: 4px;
+        display: inline-block;
+        white-space: normal;
+        font-size: 11.5px;
       }
 
       ul.bullet-list {
         padding-left: 16px;
+      }
+
+      ul.bullet-list li {
+        text-align: left;
+        font-size: 12.5px;
+        margin-bottom: 6px;
+      }
+
+      .coursework-text {
+        font-size: 12px;
       }
     }
 
@@ -375,9 +468,9 @@
       <h1 class="name">Sarvesh Kelkar</h1>
       <div class="contact-bar">
         <span class="contact-item">Flat No. 6, Blue Diamond Society, Sharanpur Road, Nashik - 422005</span>
-        <span class="contact-item">|</span>
+        <span class="contact-item separator">|</span>
         <span class="contact-item"><a href="mailto:sarveshkelkar5@gmail.com">sarveshkelkar5@gmail.com</a></span>
-        <span class="contact-item">|</span>
+        <span class="contact-item separator">|</span>
         <span class="contact-item"><a href="tel:+919579366476">+91-9579366476</a></span>
       </div>
       <div class="meta-line">
