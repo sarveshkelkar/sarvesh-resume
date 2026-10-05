@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarvesh Kelkar - Resume</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(140deg, #f7f6f2 0%, #ebe8e1 50%, #f4f3ed 100%);
+      background-attachment: fixed;
+      color: #2d3748;
+      line-height: 1.6;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 44px 16px;
+      min-height: 100vh;
+    }
+
+    .resume-container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(249, 248, 245, 0.86) 100%);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      padding: 48px 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 25px 50px -12px rgba(45, 55, 72, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resume-container:hover {
+      border-color: rgba(0, 0, 0, 0.14);
+      box-shadow: 0 30px 60px -12px rgba(45, 55, 72, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
+    }
+
+    header {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 247, 244, 0.8) 100%);
+      border: 1px solid rgba(67, 76, 86, 0.12);
+      border-radius: 14px;
+      padding: 26px 30px;
+      margin-bottom: 28px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.05), inset 0 1px 0 #ffffff;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    header:hover {
+      transform: translateY(-2px);
+      border-color: rgba(67, 76, 86, 0.22);
+      box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.08), inset 0 1px 1px #ffffff;
+    }
+
+    h1.name {
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #434c56;
+      margin-bottom: 12px;
+      transition: color 0.2s ease;
+    }
+
+    header:hover h1.name {
+      color: #2b323a;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 10px;
+      color: #4e5762;
+      font-size: 13px;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(67, 76, 86, 0.04);
+      border: 1px solid rgba(67, 76, 86, 0.12);
+      padding: 3px 9px;
+      border-radius: 6px;
+      color: #434c56;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(67, 76, 86, 0.09);
+      border-color: rgba(67, 76, 86, 0.24);
+      color: #262c33;
+      transform: translateY(-1px);
+    }
+
+    .contact-bar a {
+      color: #434c56;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-bar a:hover {
+      color: #1a2027;
+    }
+
+    .meta-line {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: #555f6b;
+      display: inline-block;
+      padding: 3px 10px;
+      background: rgba(67, 76, 86, 0.04);
+      border: 1px solid rgba(67, 76, 86, 0.12);
+      border-radius: 6px;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .meta-line:hover {
+      background: rgba(67, 76, 86, 0.09);
+      border-color: rgba(67, 76, 86, 0.24);
+      color: #262c33;
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: #434c56;
+      background: transparent;
+      padding: 0 0 6px 0;
+      margin-bottom: 14px;
+      border: none;
+      border-bottom: 1.5px solid #374151;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .section-title:hover {
+      color: #2b323a;
+      border-bottom-color: #111827;
+      transform: translateX(2px);
+    }
+
+    .entry {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 247, 244, 0.8) 100%);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(145deg, #ffffff 0%, rgba(252, 251, 249, 0.95) 100%);
+      border-color: rgba(0, 0, 0, 0.16);
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.09), inset 0 1px 0 #ffffff;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: #0f172a;
+      transition: color 0.2s ease;
+    }
+
+    .entry:hover .entry-title {
+      color: #434c56;
+    }
+
+    .entry-location {
+      font-size: 12.5px;
+      color: #64748b;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .entry-subheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .entry-subtitle {
+      font-style: italic;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .entry-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+      margin-left: 12px;
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .entry-meta {
+      font-size: 12.5px;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+
+    ul.bullet-list {
+      list-style-type: square;
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 6px;
+      color: #334155;
+      text-align: justify;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    ul.bullet-list li:hover {
+      color: #0f172a;
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    ul.bullet-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .coursework-text {
+      font-size: 12.5px;
+      color: #334155;
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+
+    .coursework-label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .link-text {
+      color: #4b5563;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .link-text:hover {
+      color: #1f2937;
+    }
+
+    @media screen and (max-width: 680px) {
+      body {
+        padding: 16px 8px;
+      }
+
+      .resume-container {
+        padding: 24px 16px;
+        border-radius: 12px;
+      }
+
+      header {
+        padding: 18px 16px;
+      }
+
+      .entry-header, .entry-subheader {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .entry-location, .entry-date {
+        margin-left: 0;
+        margin-top: 4px;
+      }
+
+      ul.bullet-list {
+        padding-left: 16px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #1a1a1a !important;
+        padding: 0;
+      }
+
+      .resume-container {
+        max-width: 100%;
+        padding: 0;
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      header, .entry, .contact-item, .meta-line, .section-title {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+      }
+
+      .section-title {
+        border-bottom: 1.5px solid #1a1a1a !important;
+        border-left: none !important;
+        color: #1a1a1a !important;
+        padding-left: 0;
+      }
+
+      h1.name, .entry-title, .coursework-label {
+        color: #1a1a1a !important;
+      }
+
+      .contact-bar, .entry-subtitle, .entry-meta, .entry-date, .entry-location, ul.bullet-list li, .coursework-text {
+        color: #374151 !important;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit !important;
+      }
+
+      .entry {
+        page-break-inside: avoid;
+        margin-bottom: 16px;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <header>
+      <h1 class="name">Sarvesh Kelkar</h1>
+      <div class="contact-bar">
+        <span class="contact-item">Flat No. 6, Blue Diamond Society, Sharanpur Road, Nashik - 422005</span>
+        <span class="contact-item">|</span>
+        <span class="contact-item"><a href="mailto:sarveshkelkar5@gmail.com">sarveshkelkar5@gmail.com</a></span>
+        <span class="contact-item">|</span>
+        <span class="contact-item"><a href="tel:+919579366476">+91-9579366476</a></span>
+      </div>
+      <div class="meta-line">
+        Gender: Male | Age: 21
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="section-education">
+        <h2 id="section-education" class="section-title">Education</h2>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Institute of Chartered Accountants of India</span>
+            <span class="entry-location">Nashik, Maharashtra, India</span>
+          </div>
+          <div class="entry-subheader">
+            <span class="entry-subtitle">Chartered Accountant</span>
+            <span class="entry-date">May 2027</span>
+          </div>
+          <div class="coursework-text">
+            <span class="coursework-label">Relevant Coursework:</span> Financial Reporting (Ind AS) including Financial Statement Analysis, Advanced Financial Management, M&A, Options, Futures & Derivatives, Direct and Indirect Taxation, Assurance and Non-Assurance Engagements
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="entry-title">BYK College of Commerce of Savitribai Phule Pune University</span>
+            <span class="entry-location">Nashik, Maharashtra, India</span>
+          </div>
+          <div class="entry-subheader">
+            <span class="entry-subtitle">Bachelor of Commerce</span>
+            <span class="entry-date">April 2023 – April 2026</span>
+          </div>
+          <div class="entry-meta">
+            Cumulative GPA: 8.02/10; Major GPA: 8.95/10
+          </div>
+          <ul class="bullet-list">
+            <li>Specialization in Computer Applications and Systems Management (CASM) in the third year</li>
+            <li>Secured an outstanding grade in CASM in the fifth and sixth semester consecutively</li>
+            <li>Developed a prototype website using HTML and CSS for income tax calculation and GST HSN and rate classification - <a href="https://taxmateclg.netlify.app" target="_blank" rel="noopener noreferrer" class="link-text">taxmateclg.netlify.app</a></li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="entry-title">BYK College of Commerce of Savitribai Phule Pune University</span>
+            <span class="entry-location">Nashik, Maharashtra, India</span>
+          </div>
+          <div class="entry-subheader">
+            <span class="entry-subtitle">Higher Secondary Certificate - 90.33%</span>
+            <span class="entry-date">April 2022 – April 2023</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Secured the highest marks in Accountancy and Book-Keeping: 99/100</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Boys' Town Public School</span>
+            <span class="entry-location">Nashik, Maharashtra, India</span>
+          </div>
+          <div class="entry-subheader">
+            <span class="entry-subtitle">Secondary School Certificate - 95.40% (Ranked 5th in the school)</span>
+            <span class="entry-date">March 2021</span>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="section-experience">
+        <h2 id="section-experience" class="section-title">Work Experience</h2>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Sanket S. Shah & Co., Chartered Accountants</span>
+            <span class="entry-location">Nashik, Maharashtra</span>
+          </div>
+          <div class="entry-subheader">
+            <span class="entry-subtitle">Articled Assistant</span>
+            <span class="entry-date">July 2024 – July 2026</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Handled GST compliance, advisories, and indirect tax litigation for a listed entity an enzyme manufacturer with a turnover exceeding INR 350 crores, and one of the country's most prominent hotel chains.</li>
+            <li>Spearheaded GSTR-9 and GSTR-9C compliance for a large MNC in the logistics sector with a collective turnover of more than INR 5,000 crores for 2 consecutive years. Assignment included 66 GST registrations.</li>
+            <li>Managed GST and Profession Tax (PT) compliance for a large yarn manufacturing and trading company based in Malegaon with turnover of more than INR 300 crores for 1 financial year.</li>
+            <li>Prepared and documented a refund claim of over INR 1 crore in Central Excise Duty and Service Tax for a listed entity, including direct communication with the Assistant Commissioner. Refund successfully granted.</li>
+            <li>Prepared workings and filed a GST refund claim of INR 1 crore ITC on exports without payment of tax through Form RFD-01 for a listed contraceptives manufacturer with turnover exceeding INR 280 crores.</li>
+            <li>Provided HSN and rate advisory in relation to a hero-product of a listed entity</li>
+            <li>Drafted CA certificates confirming (i) ITC availment in GST returns and (ii) non-passing of tax incidence on supplies to SEZ units without payment of tax, as per Rule 89 of the CGST Rules, 2017.</li>
+            <li>Handled service tax appeals (Tribunal and Commissionerate appeals)</li>
+            <li>Delivered MIS insights to real estate developers, improving key metrics such as collections vs. demand, revenue booked vs. demanded, and GST 80:20 expense rule analysis</li>
+            <li>Reviewed and corrected a real estate developer's hoarding advertisement to ensure compliance with RERA guidelines, mitigating regulatory risk</li>
+            <li>Participated in the statutory audit of a Mumbai-based logistics company. Key highlights: Analysed segment-wise profitability and work-in-progress shipments at the end of the financial year with the industry average.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="section-writing">
+        <h2 id="section-writing" class="section-title">Writing</h2>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="entry-title">WRITING: Thane Realty News (Contributing Writer)</span>
+            <span class="entry-date">July 2024 – March 2025</span>
+          </div>
+          <p class="entry-meta">
+            Assisted the firm's principal in producing content to spread awareness about RERA and taxation surrounding the real estate sector in India. Major topics covered included:
+          </p>
+          <ul class="bullet-list">
+            <li>Leveraging the RERA portal for smooth home buying</li>
+            <li>A complete guide to rental income taxation in India (GST and Income Tax)</li>
+            <li>Detailed guidance to homebuyers on Section 1941A of the Income Tax Act, 1961</li>
+            <li>Essential MahaRERA agreement clauses every homebuyer must check</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
